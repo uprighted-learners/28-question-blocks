@@ -4,11 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <title>Quiz Game</title>
   </head>
   <body>
-    <h1>HI MOM</h1>
-
-    <script src="./script.js"></script>
+    <div id="player-turn">Player 1's turn</div>
+    <div id="categories">
+      <!-- Categories will be inserted here by JavaScript -->
+    </div>
+    <div id="question-container" style="display: none">
+      <div id="question">Question will appear here</div>
+      <input type="text" id="answer" placeholder="Type answer here" />
+      <button onclick="submitAnswer()">Submit Answer</button>
+      <button onclick="passQuestion()">Pass</button>
+    </div>
+    <div id="scores">
+      <div>Player 1 Score: <span id="player1-score">0</span></div>
+      <div>Player 2 Score: <span id="player2-score">0</span></div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
