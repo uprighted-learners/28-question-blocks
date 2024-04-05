@@ -89,7 +89,11 @@ function passQuestion() {
 
 // function to switch the current player and update the display to show who is player
 function switchPlayer() {
-    currentPlayer = currentPlayer === 1 ? 2 : 1;
+    if (currentPlayer === 1) {
+        currentPlayer = 2;
+    } else {
+        currentPlayer = 1;
+    }
     document.getElementById('player-turn').innerText = `Player ${currentPlayer}'s Turn`;
 }
 
